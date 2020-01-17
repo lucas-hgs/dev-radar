@@ -19,14 +19,14 @@ module.exports = {
 
       await checkDev.updateOne({ name, avatar_url, bio });
 
-      return res.json({checkDev});
+      return res.json({message: 'User has been updated!'});
     }
 
     const { name, avatar_url, bio, techs } = req.body;
 
     await checkDev.updateOne({ name, avatar_url, bio, techs });
 
-    return res.json({checkDev});
+    return res.json({message: 'User has been updated!'});
   },
 
   async delete (req, res) {
